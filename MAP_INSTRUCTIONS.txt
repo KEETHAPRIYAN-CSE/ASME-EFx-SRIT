@@ -1,0 +1,12 @@
+<!-- Placeholder for map image -->
+<!-- Please add your map image as 'map.jpg' in the same directory as index.html -->
+<!-- You can take a screenshot from Google Maps showing SRIT location -->
+<!-- Recommended size: 800x400 pixels or similar aspect ratio -->
+
+To create the map image:
+1. Go to https://maps.app.goo.gl/AkUYFy656n8J9fLr7
+2. Take a screenshot of the map view
+3. Save it as 'map.jpg' in the D:\ASME_eFx folder
+4. The website will automatically display it in the footer
+
+Alternative: You can also export a map from Google Maps or use any map visualization tool.
