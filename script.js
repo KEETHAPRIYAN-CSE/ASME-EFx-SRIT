@@ -1,5 +1,13 @@
 // ASME EFx SRIT 2026 - JavaScript Functionality
 
+// Hide loading screen when page is fully loaded
+window.addEventListener('load', function() {
+    const loadingScreen = document.querySelector('.loading-screen');
+    setTimeout(() => {
+        loadingScreen.classList.add('hidden');
+    }, 500);
+});
+
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
     
@@ -192,8 +200,8 @@ document.addEventListener('DOMContentLoaded', function() {
         galleryItems.forEach(item => {
             item.addEventListener('click', function() {
                 const img = this.querySelector('img');
-                const title = this.querySelector('h3').textContent;
-                const description = this.querySelector('p').textContent;
+                const title = this.querySelector('h3').textContent || '';
+                const description = this.querySelector('p').textContent || '';
                 
                 // Create modal
                 const modal = document.createElement('div');
@@ -228,6 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Close modal
                 const closeModal = () => {
                     modal.remove();
+                    document.body.style.overflow = 'auto'
                 };
                 
                 modal.querySelector('.modal-close').addEventListener('click', closeModal);
